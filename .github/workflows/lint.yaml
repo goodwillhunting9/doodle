@@ -1,0 +1,18 @@
+name: Lint
+run-name: Linting ${{ github.repository }}
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.py'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**.py'
+
+jobs:
+  py-lint:
+    uses: seyLu/reusable-workflows/.github/workflows/py-lint.yaml@3021aa9fba55bdbdc207fd84cfc60e9a7b4a33eb # main
